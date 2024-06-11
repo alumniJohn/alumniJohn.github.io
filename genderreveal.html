@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+<body>
+    <style>
+    body {
+        color:rgb(17, 44, 251);
+        background-color: rgb(75, 81, 74);
+        font-size: 50px;
+    }
+    button{
+        font-size: 20px;
+        padding: 14px 40px;
+        border-radius: 12px;
+        background-color: rgb(134, 141, 134);
+        color: black;
+    }
+    </style>
+<title>Gender Reveal</title>
+<p>
+        <button type="button" onclick="genderReveal()">Reveal Baby Name</button>
+    </a>
+</p>
+<p id="reveal" onclick="genderReveal()"></p>
+    <script>
+        const boyName = ["O","L","I","V","E","R<br>","G","E","N","E<br>","S","E","L","F"];
+        let index = 1;
+    
+        function genderReveal() {
+            if(index < boyName.length + 1){
+            let text ="";
+            for (let i = 0; i < index; i++){
+                text += boyName[i];
+            }
+            index += 1;
+            document.getElementById("reveal").innerHTML = text;
+        }
+    }
+    </script>
+</body>
+</html>
